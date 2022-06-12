@@ -60,7 +60,7 @@ pub struct FoldProps {
 ///
 /// ```
 /// # use kayak_ui::core::{Handler, rsx, use_state};
-/// # use kayak_ui::widgets::{Text};
+/// # use kayak_ui::widgets::{Fold, Text};
 ///
 /// let (open, set_open) = use_state!(false);
 /// let on_change = Handler::new(move |value| {
