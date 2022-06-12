@@ -84,12 +84,13 @@ pub struct TooltipConsumerProps {
 ///
 /// ```
 /// # use kayak_ui::core::{rsx, widget};
+/// # use kayak_ui::widgets::{TooltipConsumer, TooltipProvider};
 ///
 /// #[widget]
 /// fn MyWidget() {
 ///   rsx! {
 ///     <>
-///         <TooltipProvider size={Some(1280.0, 720.0)}>
+///         <TooltipProvider size={(1280.0, 720.0)}>
 ///             // ...
 ///             <TooltipConsumer text={"Tooltip A".to_string()}>
 ///                 // ...
@@ -202,12 +203,13 @@ pub fn TooltipProvider(props: TooltipProviderProps) {
 /// # Examples
 /// ```
 /// # use kayak_ui::core::{rsx, widget};
+/// # use kayak_ui::widgets::{TooltipConsumer, TooltipProvider};
 ///
 /// #[widget]
 /// fn MyWidget() {
 ///   rsx! {
 ///     <>
-///         <TooltipProvider size={Some(1280.0, 720.0)}>
+///         <TooltipProvider size={(1280.0, 720.0)}>
 ///             // ...
 ///             <TooltipConsumer text={"Tooltip A".to_string()}>
 ///                 // ...
