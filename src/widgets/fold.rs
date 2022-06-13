@@ -59,19 +59,22 @@ pub struct FoldProps {
 /// # Examples
 ///
 /// ```
-/// # use kayak_ui::core::{Handler, rsx, use_state};
+/// # use kayak_ui::core::{Handler, rsx, use_state, widget};
 /// # use kayak_ui::widgets::{Fold, Text};
 ///
-/// let (open, set_open) = use_state!(false);
+/// # #[widget]
+/// # fn DocTestWrapper() {
+/// let (open, set_open, _) = use_state!(false);
 /// let on_change = Handler::new(move |value| {
 ///     set_open(value);
 /// });
 ///
 /// rsx! {
-///     <Fold label={"Toggle Open/Close".to_string()} open={open} on_change={Some(on_change)}>
+///     <Fold label={"Toggle Open/Close".to_string()} open={Some(open)} on_change={Some(on_change)}>
 ///         <Text content={"Fold Content".to_string()} size={16.0} />
 ///     </Fold>
 /// }
+/// # }
 /// ```
 pub fn Fold(props: FoldProps) {
     let FoldProps {
